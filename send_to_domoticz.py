@@ -1,5 +1,5 @@
 #!/usr/bin/python
-from bme280 import main
+from bmp280 import main
 from requests.auth import HTTPBasicAuth
 import requests
 import sys
@@ -52,12 +52,11 @@ if humidity is not None and temperature is not None and pressure is not None:
 
     # https://www.domoticz.com/wiki/Domoticz_API/JSON_URL%27s#Temperature.2Fhumidity.2Fbarometer
     # modele url : /json.htm?type=command&param=udevice&idx=IDX&nvalue=0&
-    # svalue=TEMP;HUM;HUM_STAT;BAR;BAR_FOR
+    # svalue=BAR;BAR_FOR
     # l URL Domoticz pour le widget virtuel
     url = '/json.htm?type=command&param=udevice&idx=' + str(domoticz_idx)
     url += '&nvalue=0&svalue='
-    url += str('{0:0.1f};{1:0.1f};{2:0.1f};{3:0}').format(temperature,
-                                                          humidity, pressure, bar_for)
+    url += str('{0:0.1f};{1:0.1f}').format(pressure, bar_for)
     print(url)
     maj_widget(url)
 
