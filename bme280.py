@@ -27,7 +27,7 @@ from ctypes import c_short
 DEVICE = 0x76
 
 
-# Rev 2 Pi, Pi 2 & Pi 3 uses bus 1
+# Rev 2 Pi, Pi 0, Pi 2 & Pi 3 uses bus 1
 # Rev 1 Pi uses bus 0
 bus = smbus.SMBus(1)
 
