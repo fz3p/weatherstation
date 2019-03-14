@@ -1,4 +1,5 @@
 #!/usr/bin/python
+
 from bme280 import main
 from requests.auth import HTTPBasicAuth
 import requests
@@ -40,13 +41,13 @@ def humidity_status(val):
 # 3 = Cloudy
 # 4 = Rain
 def barometer_forecast(val):
-    if 990 <= val <= 1029:
+    if 990 <= val <= 1010:
         weather = 4
-    elif 1030 <= val <= 1034:
+    elif 1011 <= val <= 1019:
         weather = 3
-    elif 1035 <= val <= 1040:
+    elif 1020 <= val <= 1026:
         weather = 2
-    elif 1041 <= val <= 1050:
+    elif 1026 <= val <= 1100:
         weather = 1
     else:
         weather = 0
