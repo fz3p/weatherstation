@@ -26,5 +26,25 @@ sudo pip install requests
 sudo crontab -e
 */1 * * * * sudo /home/user/script/dht11.py
 `
-*http://fr.wikipedia.org/wiki/Crontab*# weatherstation
-Station météo avec un Raspberry 0 W
+*http://fr.wikipedia.org/wiki/Crontab*# weatherstation*
+
+# pin
+
+## LED
+GPIO7   =  +
+GPIO30  =  - (+resistance 330)
+
+## DHT11
+GPIO1   =  alim
+GPIO6 	=  grnd
+GPIO18 	=  info
+
+## BME280
+GPIO2 	= alim
+GPIO39  = grnd
+GPIO3 	= SDA
+GPIO5	= SCL
+
+
+
+
