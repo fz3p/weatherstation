@@ -34,10 +34,16 @@ sudo crontab -e
 GPIO7   =  +
 GPIO30  =  - (+resistance 330)
 
+## PHOTORESISTOR
+config BCM faire conversion
+GPIO16 	=  +
+GPIO14  =  - 
+
 ## DHT11
+config BCM faire conversion
 GPIO1   =  alim
 GPIO6 	=  grnd
-GPIO18 	=  info
+GPIO12 	=  info
 
 ## BME280
 GPIO2 	= alim

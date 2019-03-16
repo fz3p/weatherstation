@@ -1,3 +1,4 @@
+# coding: utf-8
 #!/usr/bin/python
 
 import RPi.GPIO as GPIO ## Import GPIO library
